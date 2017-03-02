@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "noEmitOnError": true,
+    "declaration": false,
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true
+  },
+  "compileOnSave": true
+}
