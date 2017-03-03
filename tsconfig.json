@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "noEmitOnError": true,
+    "target": "es5",
+    "experimentalDecorators": true,
     "declaration": false,
     "sourceMap": false,
     "noImplicitAny": true,
@@ -10,5 +10,9 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true
   },
-  "compileOnSave": true
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
 }
