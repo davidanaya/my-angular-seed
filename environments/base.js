@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var cwd = process.cwd();
 
 module.exports = function() {
@@ -56,6 +57,12 @@ module.exports = function() {
         }
       ]
     },
+    plugins: [
+      new webpack.ContextReplacementPlugin(
+        /angular(\\|\/)core(\\|\/)@angular/,
+        path.resolve(cwd, 'app')
+      )
+    ],
     resolve: {
       extensions: ['.ts', '.js'],
       modules: ['node_modules', cwd]
