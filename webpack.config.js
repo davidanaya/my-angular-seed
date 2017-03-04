@@ -1,5 +1,1 @@
-function buildEnvironment(env) {
-  return require('./environments/' + env + '.js')({ env: env })
-}
-
-module.exports = buildEnvironment;
+module.exports = require('./config/webpack.dev.js');
