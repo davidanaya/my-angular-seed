@@ -1,18 +1,22 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "declaration": false,
-    "sourceMap": false,
-    "noImplicitAny": true,
-    "strictNullChecks": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noEmitHelpers": false,
+    "pretty": true,
+    "sourceMap": true,
+    "lib": ["es5", "dom"],
+    "strictNullChecks": false
   },
   "exclude": [
     "node_modules"
   ],
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true,
+    "forkChecker": true,
+    "useCache": true
+  },
   "compileOnSave": false,
   "buildOnSave": false
 }
