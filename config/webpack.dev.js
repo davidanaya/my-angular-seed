@@ -1,5 +1,4 @@
 var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 const path = require('path');
 
@@ -12,7 +11,6 @@ module.exports = webpackMerge(commonConfig, {
     chunkFilename: '[id].chunk.js'
   },
   plugins: [
-    //new ExtractTextPlugin('app.css')
   ],
   devServer: {
     historyApiFallback: true,

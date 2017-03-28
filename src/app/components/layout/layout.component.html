@@ -1,0 +1,9 @@
+<main-sidebar></main-sidebar>
+<div class="wrapper">
+    <main-header [title]="pageTitle" (sidebarToggle)="sidebarToggle($event)"></main-header>
+
+    <router-outlet></router-outlet>
+</div>
+
+<!-- modals opened with angular2-modal will be placed here -->
+<span defaultOverlayTarget></span>

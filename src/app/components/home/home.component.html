@@ -1,0 +1,70 @@
+<div class="main-content">
+    <div class="container">
+      <!--breadcrumb></breadcrumb-->
+
+        <div class="tiles">
+            <a class="tiles_item highlighted purple" routerLink="/my-overview-dashboard"
+               [class.disabled]="!authorization.hasScopePermission([])">
+                <div class="tiles_item_name">Overview</div>
+                <div class="tiles_item_description">
+                    My Overview Dashboard subtitle
+                </div>
+            </a>
+            <a class="tiles_item purple" routerLink="/my-directorate-dashboard"
+               [class.disabled]="!authorization.hasScopePermission([])">
+                <div class="tiles_item_name">Directorate</div>
+                <div class="tiles_item_description">
+                    My Directorates Dashboard description
+                </div>
+            </a>
+        </div>
+        <div class="widget">
+            <header>
+                <h1>{{ selectedSection }}</h1>
+                <div class="tools">
+                    <div class="tools_item">
+                        <ul class="nav nav-pills">
+                            <li role="presentation" class="active">
+                                <a href="#forms" data-toggle="pill" (click)="selectedSection='Forms'">Forms</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#reports" data-toggle="pill" (click)="selectedSection='Reports'">Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="widget-content tab-content">
+                <div role="tabpanel" class="tab-pane active items-list compact"
+                     id="forms">
+                    <a routerLink="/my-first-form" class="items-list_item purple"
+                       [class.disabled]="!authorization.hasScopePermission([])">
+                        <div class="items-list_item_icon-container">
+                            <div class="items-list_item_icon">
+                                <span class="items-list_item_first-letter">F</span>
+                            </div>
+                        </div>
+                        <div class="items-list_item_info">
+                            <h2>My First Form</h2>
+                        </div>
+                    </a>
+                    <div class="clearfix"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane items-list compact" id="reports">
+                    <a routerLink="/my-first-report" class="items-list_item purple"
+                       [class.disabled]="!authorization.hasScopePermission([])">
+                        <div class="items-list_item_icon-container">
+                            <div class="items-list_item_icon">
+                                <span class="items-list_item_first-letter">F</span>
+                            </div>
+                        </div>
+                        <div class="items-list_item_info">
+                            <h2>My First Report</h2>
+                        </div>
+                    </a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
