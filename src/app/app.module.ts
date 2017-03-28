@@ -14,7 +14,6 @@ import { FirstFormComponent } from './components/forms/first-form.component';
 import { FirstReportComponent } from './components/reports/first-report.component';
 
 import { baseRouting, appRouting } from './app.routes';
-import { Config } from './shared/config/env.config';
 
 @NgModule({
   imports: [
@@ -40,8 +39,8 @@ import { Config } from './shared/config/env.config';
       provide: ADNOCConfig,
       useFactory: () => {
         return new ADNOCConfig({
-          apiUrl: Config.API,
-          BIBaseUrl: Config.BI_BASE_URL,
+          apiUrl: process.env.CONFIG.API,
+          BIBaseUrl: process.env.CONFIG.BI_BASE_URL,
           appName: 'Your app name',
           appId: 'your-app-id'
         });

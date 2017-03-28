@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rimraf dist",
-    "start": "webpack-dev-server --env.adnoc-dev --inline --progress",
-    "build": "npm run clean && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "start": "webpack-dev-server --env.config=adnoc_dev --inline --progress",
+    "start-dev": "webpack-dev-server --env.config=dev --inline --progress",
+    "build": "npm run clean && webpack --config --env.config=adnoc_prod config/webpack.prod.js --progress --profile --bail"
   },
   "dependencies": {
     "@angular/common": "2.0.0",
