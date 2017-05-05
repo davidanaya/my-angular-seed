@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-//var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -23,16 +22,13 @@ module.exports = {
         test: /\.html$/,
         use: 'raw-loader'
       },
-      /*{
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['sass-loader']
-        })
-      }*/
       {
         test: /\.scss$/,
         use: ['raw-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+      },
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
